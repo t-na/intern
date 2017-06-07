@@ -3,12 +3,12 @@ import subprocess
 import time
 
 def switch_ap():
-    # Get a available AP list
+    # Get an available AP list
     result = subprocess.run('/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s', shell = True, stdout=subprocess.PIPE)
     output = result.stdout.decode('utf-8')
-    #split Wi-Fi list based on a new line
+    # split Wi-Fi list based on a new line
     ap_list = output.split('\n')
-    # Prepare a empty dictinary for SSID and RSSI pair
+    # Prepare an empty dictinary for SSID and RSSI pair
     SSID_RSSI = {}
     # display the AP list
     for ap in ap_list:
