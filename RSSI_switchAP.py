@@ -37,15 +37,15 @@ def switch_ap():
     sorted_ssid_rssi_pair = sorted(SSID_RSSI.items(), key = lambda x:x[1], reverse = True)
 
     for ap in sorted_ssid_rssi_pair:
-    # list of available AP and its password
+        # list of available AP and its password
         password = {
             "HUMAX-A7F87-A":"dWG5M5N5NjE3L",
             "HUMAX-A7F87":"dWG5M5N5NjE3L",
             "Xperia Z1 f_11c37":"6680e7c7185d"
             }
-    # Switch the AP with max AP, password of which is known
         if ap[0] in password:
             subprocess.run('networksetup -setairportnetwork en0 max_ap password.get["max_ap"]', shell = True, stdout=subprocess.PIPE)
+        # Switch the AP with max AP, password of which is known
             print('Changed AP to "{0}"'.format(ap[0]))
             break
 # Switch the AP with max AP evry 5 seconds
