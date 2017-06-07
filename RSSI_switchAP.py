@@ -20,7 +20,7 @@ def switch_ap():
         start_RSSIindex = ap_list[i].rfind(':') + 4
         start_SSIDindex = ap_list[i].find(':')
         rssi_element = ap[start_RSSIindex : start_RSSIindex+5]
-        ssid_element = ap[: start_SSIDindex-4]
+        ssid_element = ap[: start_SSIDindex-3]
 
         # Subsutitude SSID-RSSI pair for dictionary, overwriting the RSSI with max one.　
         if rssi_element[1:].strip().isdigit(): #　avoid the error derived from RSSI
