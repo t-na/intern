@@ -42,9 +42,9 @@ def switch_ap():
             "HUMAX-A7F87-A":"dWG5M5N5NjE3L",
             "HUMAX-A7F87":"dWG5M5N5NjE3L",
             "Xperia Z1 f_11c37":"6680e7c7185d"
-            }
         if ap[0] in password:
             subprocess.run('networksetup -setairportnetwork en0 max_ap password.get["max_ap"]', shell = True, stdout=subprocess.PIPE)
+        }
         # Switch the AP with max AP, password of which is known
             print('Changed AP to "{0}"'.format(ap[0]))
             break
