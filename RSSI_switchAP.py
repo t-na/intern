@@ -40,7 +40,7 @@ def switch_ap():
     password = {
         "HUMAX-A7F87-A":"dWG5M5N5NjE3L",
         "HUMAX-A7F87":"dWG5M5N5NjE3L",
-        "Xperia Z1 f_11c37":"6680e7c7185d"
+        "Xperia Z1 f_11c37":"6680e7c7185d",
     }
 
     for ap in sorted_ssid_rssi_pair:
