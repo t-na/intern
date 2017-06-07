@@ -10,9 +10,6 @@ def switch_ap():
     ap_list = output.split('\n')
     # Prepare an empty dictinary for SSID and RSSI pair
     SSID_RSSI = {}
-    # display the AP list
-    for ap in ap_list:
-        print(ap)
 
     # Create the SSID-maxRSSI pair for the dictionary.
     for i in range(1, len(ap_list)):
@@ -49,6 +46,7 @@ def switch_ap():
     # Switch the AP with max AP, password of which is known
         if ap[0] in password:
             subprocess.run('networksetup -setairportnetwork en0 max_ap password.get["max_ap"]', shell = True, stdout=subprocess.PIPE)
+            print('Changed AP to "{0}"'.format(ap[0]))
             break
 # Switch the AP with max AP evry 5 seconds
 time.sleep(5)
