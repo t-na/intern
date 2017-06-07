@@ -51,7 +51,8 @@ def switch_ap():
             print('Changed AP to "{0}"'.format(ap[0]))
             break
 
-while True:
-    switch_ap()
-    # Switch the AP with max AP evry 5 seconds
-    time.sleep(5)
+if __name__ == '__main__':
+    while True:
+        switch_ap()
+        # Switch the AP with max AP evry 5 seconds
+        time.sleep(5)
