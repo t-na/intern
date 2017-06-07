@@ -50,7 +50,8 @@ def switch_ap():
             subprocess.run(cmd, shell = True, stdout=subprocess.PIPE)
             print('Changed AP to "{0}"'.format(ap[0]))
             break
-# Switch the AP with max AP evry 5 seconds
-time.sleep(5)
+
 while True:
     switch_ap()
+    # Switch the AP with max AP evry 5 seconds
+    time.sleep(5)
